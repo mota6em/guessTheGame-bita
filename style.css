@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primery-color: rgb(98, 0, 255);
+}
+
+body{
+    margin:0;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 50px;
+    background-color: white;
+}
+
+.guess-game{
+    background-color: rgb(199, 220, 238);
+    justify-content: center;
+    display: flex;
+    margin: 2rem auto;
+    width: fit-content;
+    min-height: 50vh;
+    text-align: center;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    .game-area{
+        
+        padding: 15px;
+        text-align: center;
+        .inputs{
+            > div{
+                margin-bottom: 1.1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span{
+                    font-size: 30px;
+                    margin-right: 15px;
+                    font-weight: bold;
+                }
+            }
+            .disabled-inputs{
+                opacity: 0.5;
+                pointer-events: none;
+            }
+            input{
+                margin: 0 5px;
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                font-size: 50px;
+                caret-color: var(--primery-color);
+                background-color: white;
+                border: none;
+                border-bottom: 3px solid rgb(44, 44, 44);
+                &:focus{
+                    outline-color: rgba(0, 23, 231, 0.474);
+                }
+                &.yes-in-place{
+                    background-color:  rgb(0, 255, 60);
+                    color: white;
+                    border:  rgb(0, 255, 60);
+                }
+                &.not-in-place{
+                    background-color: rgb(188, 188, 11);
+                    color: white;
+                    border:  rgb(188, 188, 11);
+                }
+                
+                &.no{
+                    background-color:  rgba(255, 0, 0, 0.962);
+                    color: white;
+                    border:  rgba(255, 0, 0, 0.962);
+                }
+                }
+            }
+
+        }
+    }
+    .key-colors,.key-colors-s{
+        padding: 15px;
+        .key-color{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 0.5rem;
+            .key-text{
+                width: 17rem;
+                font-size: 15px;
+                font-weight: 700;
+            }
+            .key{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                &.in-place{
+                    background-color: rgb(0, 255, 60);
+                }
+                &.not-in-place{
+                    background-color:rgb(188, 188, 11);
+                }
+                &.no{
+                    background-color: rgba(255, 0, 0, 0.962);
+                }
+            
+            }
+        }
+    } 
+
+footer{
+    background-color: rgb(78, 84, 118);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
+h1{
+    color: white;
+    font-size: 25px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(35, 52, 145);
+}
+
+
+h2{
+    color: rgb(44, 9, 173);
+}
+
+.check, .hint{
+    margin: 0 0.5rem;
+    font-size: 25px;
+    border-radius: 5px;
+    outline-color: rgb(241, 0, 0);
+    border: 2px solid white;
+    font-weight: 600;
+    color: white;
+    padding: 3px 8px;
+    span{
+        font-weight: 600;
+        text-shadow: 1px 1px 1px black;
+    }
+}
+
+.check:hover, .hint:hover{
+    box-shadow: 1px 1px 6px black;
+    /* transition: .1s ease; */
+}
+
+.check{
+    background-color: rgb(44, 44, 153);
+}
+
+.hint{
+    color: white;
+    background-color: rgb(177, 80, 0);
+}
+
+
+.result{
+    background-color: rgb(155, 100, 255);
+    height: 13rem;
+    position: relative; 
+    /* margin-right: 15px; */
+    padding: 10px;
+    z-index: 1090;
+    width: 400px;
+    transition: .3s ease;
+    right: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px solid rgb(224, 255, 139);
+    bottom: 5.5rem;
+    display: none; 
+    button{
+        font-size: 1.3rem;
+        background-color: rgb(255, 230, 0);
+    }
+    button:hover{
+        box-shadow: 1px 1px 5px white;
+    }
+}
+
+.result h2{
+    width: fit-content;
+    padding: 2px 10px;
+    font-size: 28px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.692);
+    background-color: rgba(40, 71, 156, 0.603);
+    color: white;
+    transition: .3s ease;
+}
+
+.result p{
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.692);
+    background-color: rgba(80, 173, 150, 0.603);
+    color: white;
+    transition: .3s ease;
+    font-size: 19px;
+}
+
+.result span{
+    text-shadow: 1px 1px 1px black;
+    font-weight: 600;
+    border-radius: 4px;
+    color: white;
+    transition: .3s ease;
+}
+
+.disabled-inputs{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.hideTheBox {
+    display: none;
+}
+.startBox{
+    background-color: rgb(132, 0, 255);
+    box-shadow: 1px 1px 1rem rgb(255, 230, 0);
+    position: relative;
+    left: -13.5rem;
+    top: -7.5rem;
+    width: 34rem;
+    height: 19rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        font-size: 2.5rem;
+        background-color: rgba(150, 147, 0, 0.89);
+        text-shadow: 1px 1px 1px black;
+        width: fit-content;
+        margin-bottom: 4px;
+        padding: 0 5px;
+    }
+    p{
+        color: white;
+        font-size: 25px;
+        text-shadow: 1px 2px 5px black;
+    }
+    label{
+        font-size: 23px;
+        color: white;
+        margin-bottom: 15px;
+    }
+    select{
+        font-size: 23px;
+        cursor: pointer;
+    }
+    .notl,.notc{
+        margin-bottom: 10px;
+    }
+    button{
+        font-weight: 600;
+        font-size: 24px;
+        cursor: pointer;
+        background-color: rgb(251, 255, 0);
+    }
+}
+
+.smallScreenRsideEdit{
+    display: none;
+}

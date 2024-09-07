@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="media.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1></h1>
+    <div class="smallScreenRsideEdit">
+
+        <div class="key-colors-s">
+            <h2>Key Colors</h2>
+            <div>
+                <div class="key-color">
+                    <div class="key in-place"></div>
+                    <div class="key-text">Letter is correct and in place!</div>
+                </div>    
+                <div class="key-color">
+                    <div class="key not-in-place"></div>
+                    <div class="key-text">Letter is correct but not in place!</div>
+                </div>    
+                <div class="key-color">
+                    <div class="key no"></div>
+                    <div class="key-text">Letter is not correct and not in place!</div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="guess-game">
+        <div class="game-area">
+            <div class="inputs"></div>
+            <div id="guessButton" class="control">
+                <button id="check" class="check">Check Words!</button>
+                <button id="hint" class="hint"><span></span> Hint</button>
+            </div>
+            <div class="message"></div>
+        </div> 
+        <div class="right-side">
+            <div class="key-colors">
+                <h2>Key Colors</h2>
+                <div class="key-color">
+                    <div class="key in-place"></div>
+                    <div class="key-text">Letter is correct and in place!</div>
+                </div>    
+                <div class="key-color">
+                    <div class="key not-in-place"></div>
+                    <div class="key-text">Letter is correct but not in place!</div>
+                </div>    
+                <div class="key-color">
+                    <div class="key no"></div>
+                    <div class="key-text">Letter is not correct and not in place!</div>
+                </div>    
+            </div>
+            <div class="result"></div>
+            <div class="startBox" id="startBox">
+                <h1>Hey There!</h1>
+                <p>Let's Start A New Word Search Game!</p>
+                <div class="notc">
+
+                    <label for="numOfTries">Choose number of tries:</label>
+                    <select name="triesNumber" id="numOfTries">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" >5</option>
+                        <option value="6"selected>6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="notl">
+
+                    <label for="numOfLetters">Choose the length of the word:</label>
+                    <select name="numOfLetters" id="numOfLetters">
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+                <button id="startTheGame">START!</button>
+            </div>
+        </div>
+    </div>   
+</body>
+<footer></footer>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,147 @@
+/*@media screen and (min-width: 551px) and (max-width:751px){
+    .guess-game{
+        width: fit-content;
+        display: flex;
+        flex:1;
+        background-color: rgb(69, 106, 117);
+    }
+    .right-side{
+        width: 45%;
+        h2{
+            color: white;
+            text-shadow: 1px 1px 4px black;
+        }
+    }
+    .startBox{
+        display: none;
+    }
+    .key-colors{
+        .key-color{
+            .key{
+                width: 40px;
+            }
+        }
+    }
+    .inputs{
+        input{
+            width: 30px;
+            height: 20px;
+        }
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+    
+    .guess-game {
+        width: 100%; 
+        max-width: 400px; 
+    }
+    
+}*/
+
+
+@media  (max-width: 550px) {
+    h1{
+        margin: 0;
+    }
+    .guess-game{
+        margin-bottom: 10rem !important;
+        margin: 0;
+        width: 100%;
+        .game-area{
+
+        }
+        .guessButton{
+            .check, .hint{
+                font-size: 12px;
+            }
+        }
+    }
+    #hint,#check{
+        font-size: 1.4rem;
+    }
+    .inputs{
+        div{
+
+            }
+            /* width: 112rem; */
+        }
+        .try-letter-box{
+            width: 40px !important;
+            height: 40px !important;
+            font-size: 25px !important;
+        }
+        .try-span{
+        font-size: 25px !important;        
+    }
+    .inputs div span {
+        font-size: 3px; /* or any size you want */
+    }
+    
+    .right-side{
+        /* display: none; */
+    }
+    .key-colors{
+        display: none;
+    }
+    .startBox{
+        width: 400px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        /* display: none; */
+    }
+    .startBox {
+        width: 350px; /* Make it more responsive */
+        height: auto; /* Adjust height to content */
+        padding: 20px; /* Add some padding */
+        box-sizing: border-box;
+        left: -142px;
+        /* transform: translate(21%);  */
+        top: 41px;
+        z-index: 1090;
+        select{
+            font-size: 20px;
+        }
+    }
+    .result{
+        left: -145px;
+        top: 65px;
+        width: 300px;
+    }
+    .smallScreenRsideEdit{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+        height:fit-content;
+        margin: 0;
+        p{
+            font-size: 12px;
+        }
+        .key-color{
+            margin: 0;
+            .key{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    .key-colors-s{
+        display: flex;
+        h2{
+            background-color: rgba(52, 0, 136, 0.733);
+            box-shadow: 1px 1px 5px black;
+            border-radius: 2px;
+            padding: 1px 5px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            writing-mode: vertical-rl;
+        }
+    }
+    
+}
